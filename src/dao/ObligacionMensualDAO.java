@@ -4,8 +4,9 @@ import modelo.ObligacionMensual;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import dao.interfaces.IObligacionMensualDAO;
 
-public class ObligacionMensualDAO {
+public class ObligacionMensualDAO implements IObligacionMensualDAO {
 
     // INSERTAR obligación
     public boolean insertar(ObligacionMensual om) {

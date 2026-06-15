@@ -4,8 +4,9 @@ import modelo.AfiliadoJubilado;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import dao.interfaces.IAfiliadoJubiladoDAO;
 
-public class AfiliadoJubiladoDAO {
+public class AfiliadoJubiladoDAO implements IAfiliadoJubiladoDAO {
 
     // INSERTAR afiliado
     public boolean insertar(AfiliadoJubilado afiliado) {

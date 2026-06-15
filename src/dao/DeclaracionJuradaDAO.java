@@ -4,8 +4,9 @@ import modelo.DeclaracionJurada;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import dao.interfaces.IDeclaracionJuradaDAO;
 
-public class DeclaracionJuradaDAO {
+public class DeclaracionJuradaDAO implements IDeclaracionJuradaDAO {
 
     // INSERTAR DJ
     public boolean insertar(DeclaracionJurada dj) {

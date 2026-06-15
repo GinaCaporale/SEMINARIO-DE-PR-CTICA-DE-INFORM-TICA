@@ -13,6 +13,12 @@ public class PagoControlador {
     private PagoDAO dao = new PagoDAO();
     private AfiliadoJubiladoDAO afiliadoDAO = new AfiliadoJubiladoDAO();
     private Usuario usuarioActivo;
+    
+    // Arreglo estático de medios de pago disponibles
+private static final String[] MEDIOS_PAGO = {"TRANSFERENCIA", "EFECTIVO", "CHEQUE"};
+
+// Arreglo estático de estados de pago
+private static final String[] ESTADOS_PAGO = {"PENDIENTE_VALIDACION", "VALIDADO", "RECHAZADO"};
 
     public PagoControlador(Usuario usuarioActivo) {
         this.usuarioActivo = usuarioActivo;
@@ -65,7 +71,7 @@ public class PagoControlador {
         System.out.println("2. EFECTIVO");
         System.out.println("3. CHEQUE");
         int medioOp = Menu.leerEntero();
-        String[] medios = {"TRANSFERENCIA", "EFECTIVO", "CHEQUE"};
+        String[] medios = MEDIOS_PAGO;
         if (medioOp < 1 || medioOp > 3) {
             Menu.mostrarError("Opción inválida.");
             return;

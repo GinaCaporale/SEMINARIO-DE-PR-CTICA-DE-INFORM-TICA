@@ -4,8 +4,9 @@ import modelo.Pago;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import dao.interfaces.IPagoDAO;
 
-public class PagoDAO {
+public class PagoDAO implements IPagoDAO {
 
     // INSERTAR pago
     public boolean insertar(Pago pago) {

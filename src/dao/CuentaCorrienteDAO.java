@@ -4,8 +4,9 @@ import modelo.DetalleCuentaCorriente;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import dao.interfaces.ICuentaCorrienteDAO;
 
-public class CuentaCorrienteDAO {
+public class CuentaCorrienteDAO implements ICuentaCorrienteDAO {
 
     // OBTENER id de cuenta por afiliado
     public int obtenerIdCuenta(int idAfiliado) {
